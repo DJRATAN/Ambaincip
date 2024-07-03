@@ -3225,8 +3225,8 @@
  .mentor_image {
      filter: brightness(120%)grayscale();
      object-fit: contain;
-     width: 150px;
-     height: 150px;
+     width: 190px;
+     height: 190px;
      position: absolute;
      top: auto;
      bottom: 0%;
@@ -3412,7 +3412,7 @@
      grid-row-gap: 4px;
      letter-spacing: .72px;
      background-color: #ede0d9;
-     border: 1px solid rgba(36, 49, 94, .8);
+     border: 1px solid #073E73;
      border-radius: 8px;
      align-items: center;
      padding: 6px 8px;
@@ -6886,9 +6886,7 @@
          display: flex
      }
 
-     .image-11 {
-         width: 80px
-     }
+ 
 
      .d2c-btn {
          text-align: center;
