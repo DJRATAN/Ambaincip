@@ -778,12 +778,12 @@
      margin-right: auto
  }
 
- .w-container:before,
+ /* .w-container:before,
  .w-container:after {
      content: " ";
      grid-area: 1/1/2/2;
      display: table
- }
+ } */
 
  .w-container:after {
      clear: both
@@ -4523,6 +4523,12 @@
      grid-auto-columns: 1fr;
      align-items: start;
      display: grid
+ }
+
+ .footerClass {
+     display: grid;
+     column-gap: 350px;
+     grid-template-columns: auto auto;
  }
 
  .advantage-block1 {
