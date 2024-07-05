@@ -79,23 +79,26 @@
   </style>
   <script>
     function toggleAnswer(event) {
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(item => {
-        item.classList.remove('active');
-        const answer = item.querySelector('.faq-answer');
-        answer.style.display = 'none';
-      });
-      const faqicon = document.querySelectorAll('.faqicon');
-      faqicon.forEach(item => {
-        item.innerText = '+'
-
-      });
-
       const currentItem = event.currentTarget;
-      currentItem.classList.add('active');
       const answer = currentItem.querySelector('.faq-answer');
-      answer.style.display = 'block';
-      currentItem.querySelector(".faqicon").innerText = '-'
+      const faqIcon = currentItem.querySelector('.faqicon');
+
+      if (currentItem.classList.contains('active')) {
+        currentItem.classList.remove('active');
+        answer.style.display = 'none';
+        faqIcon.innerText = '+';
+      } else {
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('.faq-answer').style.display = 'none';
+          item.querySelector('.faqicon').innerText = '+';
+        });
+
+        currentItem.classList.add('active');
+        answer.style.display = 'block';
+        faqIcon.innerText = '-';
+      }
     }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -314,7 +317,7 @@
               <a href="community.html" class="navlink w-nav-link"><b>Community</b></a>
 
 
-              
+
               <a href="community.html" class="navlink w-nav-link"><b>Contact Us</b></a>
               <a href="#faqs" class="navlink w-nav-link"><b>FAQs</b></a>
               <a href="#" class="navlink hide w-nav-link">Hire from
@@ -402,27 +405,10 @@
                   class="hero_lightbox w-inline-block w-lightbox"><img
                     src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659d403668b875271de0d1f6_website thumbnail.webp"
                     alt="hero thumbnail" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, 626px"
-                    srcset="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659d403668b875271de0d1f6_website%20thumbnail-p-500.webp 500w, https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659d403668b875271de0d1f6_website%20thumbnail-p-800.webp 800w, https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659d403668b875271de0d1f6_website%20thumbnail-p-1080.webp 1080w, https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659d403668b875271de0d1f6_website%20thumbnail.webp 1400w"
+                    srcset="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659d403668b875271de0d1f6_website%20thumbnail-p-500.webp 500w, ./assets/image/startup.svg 800w, https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659d403668b875271de0d1f6_website%20thumbnail-p-1080.webp 1080w, https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659d403668b875271de0d1f6_website%20thumbnail.webp 1400w"
                     class="thumbnail_image" />
-                  <div id="play-video" class="div-block-511 mc-player">
-                    <div class="div-block-512 mc-player"><img
-                        src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/65a4e8fb8cd46b39f1bd8f1e_Vector 774.svg"
-                        loading="lazy" alt="" /></div>
-                  </div>
-                  <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "url": "https://vimeo.com/899769439/fcbd19e8a5?share=copy",
-      "originalUrl": "https://vimeo.com/899769439/fcbd19e8a5?share=copy",
-      "width": 940,
-      "height": 529,
-      "thumbnailUrl": "https://i.vimeocdn.com/video/1777594389-ba7e0e753d3310d10f94d0a4d7e04f700d6300d9c72caf3a55ee0ab9db5ed42a-d?f=webp",
-      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F899769439%3Fh%3Dfcbd19e8a5%26app_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F899769439%2Ffcbd19e8a5&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1777594389-ba7e0e753d3310d10f94d0a4d7e04f700d6300d9c72caf3a55ee0ab9db5ed42a-d%3Ff%3Dwebp&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo\" width=\"940\" height=\"529\" scrolling=\"no\" title=\"Vimeo embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-      "type": "video"
-    }
-  ],
-  "group": ""
-}</script>
+
+
                 </a></div>
             </div>
           </div>
@@ -752,9 +738,9 @@
               <div class="wrapper">
                 <div class="content_block">
                   <div class="content right-20">
-                    <h2 class="text-color-dawnpink">For <span class="italic">Disruptors</span></h2>
-                    <div class="text-color-dawnpink text-size-large max-width-530">With a 2% acceptance rate, you get to
-                      build connections with the most ambitious network across the world.</div>
+                    <h2 class="text-color-dawnpink">Learn From</h2>
+                    <div class="text-color-dawnpink text-size-large max-width-530">Insights from Established Industry
+                      Leaders and Top Brands.</div>
                   </div>
                 </div>
                 <div class="disrupt-wrapper">
@@ -979,95 +965,88 @@
           <div class="padding-section-medium">
             <div class="wrapper gap-60">
               <div class="content">
-                <h2>From <span class="italic">Disruptors</span></h2>
-                <div>Learn directly from Founders, CXOs, and Top Operators</div>
+                <h2>Learn Company FootPrints And Case Studies</h2>
+                <div>Explore in-depth insights into the growth, impact, and strategies of leading companies through
+                  their footprints and detailed case studies.</div>
               </div>
               <div class="disrupt-wrapper">
                 <div class="card_wrap">
                   <div class="height-200">
 
-                    <img src="./assets/image/card1.jpg""
+                    <img src="./assets/image/dir1.svg""
                         loading=" lazy" alt="founders" class="disruptor_image" />
                   </div>
                   <div class="v-flex-8">
-                    <h3>Founder & CEO</h3>
-                    <div>Learn from the founder and CEO about developing a vision, setting long-term goals, building a
-                      strong company culture, and leading a startup from inception to success</div>
+                    <div>Airbnb started in 2007 when roommates Brian Chesky and Joe Gebbia couldn't afford their San
+                      Francisco rent. </div>
                   </div>
                 </div>
                 <div class="card_wrap">
                   <div class="height-200">
-                    <img src="./assets/image/card2.jpg" loading="lazy" alt="dinner" class="disruptor_image" />
+                    <img src="./assets/image/dir1 (2).svg" loading="lazy" alt="dinner" class="disruptor_image" />
                   </div>
                   <div class="v-flex-8">
-                    <h3>Director of Education</h3>
-                    <div>Gain insights into designing effective learning programs, creating engaging content, and
-                      implementing educational strategies that cater to diverse learning styles.
+                    <div>Founded in December 2015, OpenAI is an artificial intelligence research organization created by
+                      Elon Musk, Sam Altman, Greg Brockman, Ilya Sutskever
                     </div>
                   </div>
                 </div>
                 <div class="card_wrap">
-                  <div class="height-200"> <img src="./assets/image/card3.jpg" loading="lazy" alt="executives"
+                  <div class="height-200"> <img src="./assets/image/dir1 (3).svg" loading="lazy" alt="executives"
                       class="disruptor_image" /></div>
                   <div class="v-flex-8">
-                    <h3>Chief Technology Officer (CTO)</h3>
-                    <div>Understand the role of technology in startups, including building scalable tech solutions,
-                      managing development teams, and staying ahead with the latest tech trends.
+                    <div>Founded in 1973, Bain & Company is a global management consulting firm headquartered in Boston,
+                      Massachusetts.
                     </div>
                   </div>
                 </div>
                 <div class="card_wrap">
                   <div class="height-200">
-                    <img src="./assets/image/card4.jpg" loading="lazy" alt="driven proof" class="disruptor_image" />
+                    <img src="./assets/image/dir1 (4).svg" loading="lazy" alt="driven proof" class="disruptor_image" />
                   </div>
                   <div class="v-flex-8">
-                    <h3>Chief Operating Officer (COO)</h3>
-                    <div>Learn about the intricacies of operations management, process optimization, supply chain
-                      management, and ensuring smooth day-to-day business activities.
+                    <div>Founded in 1988, BlackRock is the world's largest asset management firm, headquartered in New
+                      York City. Initially a division of Blackstone Group.
                     </div>
                   </div>
                 </div>
               </div>
               <div class="disrupt-wrapper">
                 <div class="card_wrap">
-                  <div class="height-200"> <img src="./assets/image/card5.jpg" loading="lazy" alt="founders"
+                  <div class="height-200"> <img src="./assets/image/dir1 (5).svg" loading="lazy" alt="founders"
                       class="disruptor_image" /></div>
                   <div class="v-flex-8">
-                    <h3>Director of Marketing</h3>
-                    <div>Explore effective marketing strategies, digital marketing, brand building, customer
-                      acquisition, and leveraging social media to grow your startup.
+                    <div>JPMorgan Chase, founded in 1799, is one of the oldest and largest financial institutions in the
+                      United States, headquartered in New York City.
                     </div>
                   </div>
                 </div>
                 <div class="card_wrap">
                   <div class="height-200">
-                    <img src="./assets/image/card6.jpg" loading="lazy" alt="dinner" class="disruptor_image" />
+                    <img src="./assets/image/dir1 (6).svg" loading="lazy" alt="dinner" class="disruptor_image" />
                   </div>
                   <div class="v-flex-8">
-                    <h3>Head of Business Development</h3>
-                    <div>Discover techniques for identifying business opportunities, building partnerships, creating
-                      sales strategies, and expanding your market reach.
+                    <div>Founded in 1845, Deloitte is one of the "Big Four" accounting firms, providing audit,
+                      consulting, tax, and advisory services worldwide.
                     </div>
                   </div>
                 </div>
                 <div class="card_wrap">
                   <div class="height-200">
-                    <img src="./assets/image/card7.jpg" loading="lazy" alt="executives" class="disruptor_image" />
+                    <img src="./assets/image/dir1 (7).svg" loading="lazy" alt="executives" class="disruptor_image" />
                   </div>
                   <div class="v-flex-8">
-                    <h3>Chief Financial Officer (CFO)</h3>
-                    <div>Learn essential financial skills, including budgeting, financial planning, fundraising,
-                      investment strategies, and managing startup finances.</div>
+                    <div>Founded in 1963 by Bruce Henderson, Boston Consulting Group (BCG) is a leading global
+                      management consulting firm headquartered in Boston.</div>
                   </div>
                 </div>
                 <div class="card_wrap">
                   <div class="height-200">
-                    <img src="./assets/image/card8.jpg" loading="lazy" alt="driven proof" class="disruptor_image" />
+                    <img src="./assets/image/dir1 (8).svg" loading="lazy" alt="driven proof" class="disruptor_image" />
                   </div>
                   <div class="v-flex-8">
-                    <h3>Director of Product Management</h3>
-                    <div>Gain knowledge on developing a product roadmap, managing product lifecycle, gathering
-                      customer feedback, and ensuring product-market fit.
+                    <div>AiML Campus is a leading educational institution specializing in artificial intelligence and
+                      machine learning (AI/ML) training and certification programs.
                     </div>
                   </div>
                 </div>
@@ -1140,12 +1119,12 @@
                         </div>
                       </div>
                       <ul role="list" class="list">
-                        <li>Understand business inside out</li>
-                        <li>Learn while building your startup</li>
-                        <li>Fast-track your career and move into leadership roles.</li>
-                        <li>Specialise in Marketing, Product, Data, or Strategy</li>
+                        <li>Market-aligned business concept.</li>
+                        <li>Ready for user testing.</li>
+                        <li>Targeted audience engagement strategy.</li>
+                        <li>Detailed market analysis and financial projections.</li>
                       </ul><a href="business-fellowship.html" class="primary_button flex w-inline-block">
-                        <div>Explore Fellowship</div>
+                        <div>Explore Programme</div>
                         <div class="embed-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="33"
                             viewBox="0 0 32 33" fill="none">
                             <path
@@ -1178,7 +1157,7 @@
                                 d="M10 2.61035C8.41775 2.61035 6.87103 3.07954 5.55544 3.95859C4.23985 4.83765 3.21447 6.08707 2.60897 7.54888C2.00347 9.01069 1.84504 10.6192 2.15372 12.1711C2.4624 13.7229 3.22433 15.1484 4.34315 16.2672C5.46197 17.386 6.88743 18.1479 8.43928 18.4566C9.99113 18.7653 11.5997 18.6069 13.0615 18.0014C14.5233 17.3959 15.7727 16.3705 16.6518 15.0549C17.5308 13.7393 18 12.1926 18 10.6103C17.9978 8.48931 17.1542 6.45578 15.6544 4.95597C14.1546 3.45617 12.121 2.61259 10 2.61035ZM14.3077 11.2257H10C9.83679 11.2257 9.68027 11.1609 9.56486 11.0455C9.44945 10.9301 9.38462 10.7736 9.38462 10.6103V6.30266C9.38462 6.13945 9.44945 5.98292 9.56486 5.86752C9.68027 5.75211 9.83679 5.68727 10 5.68727C10.1632 5.68727 10.3197 5.75211 10.4351 5.86752C10.5506 5.98292 10.6154 6.13945 10.6154 6.30266V9.99497H14.3077C14.4709 9.99497 14.6274 10.0598 14.7428 10.1752C14.8582 10.2906 14.9231 10.4471 14.9231 10.6103C14.9231 10.7736 14.8582 10.9301 14.7428 11.0455C14.6274 11.1609 14.4709 11.2257 14.3077 11.2257Z"
                                 fill="#24315E" />
                             </svg></div>
-                          <div class="uppercase-12px">6 Months</div>
+                          <div class="uppercase-12px">12 Months</div>
                         </div>
                         <div class="program-block">
                           <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"
@@ -1209,11 +1188,12 @@
                         </div>
                       </div>
                       <ul role="list" class="list">
-                        <li>Get hands-on experience of all the marketing channels</li>
-                        <li>Move to marketing leadership roles</li>
-                        <li>Become industry-ready to tackle all business  marketing problems</li>
+                        <li>Clear value proposition and market fit.</li>
+                        <li>User-tested MVP ready for development.</li>
+                        <li>Detailed plan with market analysis and financials.</li>
+                        <li>Compelling brand with logo and messaging.</li>
                       </ul><a href="marketing-fellowship.html" class="primary_button flex w-inline-block">
-                        <div>Explore Fellowship</div>
+                        <div>Explore Programme</div>
                         <div class="embed-arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="33"
                             viewBox="0 0 32 33" fill="none">
                             <path
@@ -1235,52 +1215,76 @@
     <div class="w-layout-blockcontainer container w-container ">
       <div class=" ">
         <div class=" " style="text-align: center; margin: 55px 0;">
-          <p class="" style="max-width: 850px; margin: auto; font-size: 2rem;">We help founders make something people
-            want and the results speak for themselves.</p>
+          <p class="" style="max-width: 850px; margin: auto; font-size: 1.3rem;">At Ambaincip, we are dedicated to
+            helping founders turn their innovative ideas into products that people truly desire. Our mission is to guide
+            entrepreneurs through every step of the process, from ideation to execution, ensuring their vision aligns
+            with market needs and consumer preferences.</p>
         </div>
         <div style="display: flex; margin-bottom: 25px;">
           <div style="width: 25%; padding: 25px;">
-            <p style="border-left: 3px solid red; padding-left: 10px;">We help founders at their earliest stages
-              regardless of their age.</p>
+            <p style="border-left: 3px solid #24315E; padding-left: 10px;">Our mission guiding entrepreneurs from idea
+              to
+              execution, ensuring market fit.
+            </p>
             <ul>
-              <li style="margin-top: 25px;">54%of YC's billion dollar companies had no revenue when they applied</li>
-              <li style="margin-top: 25px;">52%of YC's billion dollar company founders were under 28 years old and the
-                oldest founder was in their
-                50s</li>
-              <li style="margin-top: 25px;">42%of YC's billion dollar companies applied with only an idea</li>
+              <li style="margin-top: 25px;">We facilitate creative brainstorming sessions to help founders generate and
+                refine their ideas.
+              </li>
+              <li style="margin-top: 25px;">Our team conducts comprehensive market research to validate the demand for
+                your product.
+              </li>
+              <li style="margin-top: 25px;">We engage with potential users early in the process to gather valuable
+                feedback and insights.
+              </li>
             </ul>
           </div>
           <div style="width: 25%; padding: 25px;">
-            <p style="border-left: 3px solid red; padding-left: 10px;">We help founders at their earliest stages
-              regardless of their age.</p>
+            <p style="border-left: 3px solid #24315E; padding-left: 10px;">Our mission guiding entrepreneurs from idea
+              to
+              execution, ensuring market fit.
+            </p>
             <ul>
-              <li style="margin-top: 25px;">54%of YC's billion dollar companies had no revenue when they applied</li>
-              <li style="margin-top: 25px;">52%of YC's billion dollar company founders were under 28 years old and the
-                oldest founder was in their
-                50s</li>
-              <li style="margin-top: 25px;">42%of YC's billion dollar companies applied with only an idea</li>
+              <li style="margin-top: 25px;">We assist in creating prototypes to visualize and test your concept.
+              </li>
+              <li style="margin-top: 25px;">Our technical experts provide support to overcome development challenges and
+                optimize the product.
+              </li>
+              <li style="margin-top: 25px;">We help craft a compelling marketing strategy to effectively reach your
+                target audience.
+              </li>
             </ul>
           </div>
           <div style="width: 25%; padding: 25px;">
-            <p style="border-left: 3px solid red; padding-left: 10px;">We help founders at their earliest stages
-              regardless of their age.</p>
+            <p style="border-left: 3px solid #24315E; padding-left: 10px;">Our mission guiding entrepreneurs from idea
+              to
+              execution, ensuring market fit.
+            </p>
             <ul>
-              <li style="margin-top: 25px;">54%of YC's billion dollar companies had no revenue when they applied</li>
-              <li style="margin-top: 25px;">52%of YC's billion dollar company founders were under 28 years old and the
-                oldest founder was in their
-                50s</li>
-              <li style="margin-top: 25px;">42%of YC's billion dollar companies applied with only an idea</li>
+              <li style="margin-top: 25px;">Our branding specialists work with you to build a strong and recognizable
+                brand.
+              </li>
+              <li style="margin-top: 25px;">From pre-launch preparations to post-launch analysis, we support you every
+                step of the way.
+              </li>
+              <li style="margin-top: 25px;">We track key performance indicators to measure success and identify areas
+                for improvement.
+              </li>
             </ul>
           </div>
           <div style="width: 25%; padding: 25px;">
-            <p style="border-left: 3px solid red; padding-left: 10px;">We help founders at their earliest stages
-              regardless of their age.</p>
+            <p style="border-left: 3px solid #24315E; padding-left: 10px;">Our mission guiding entrepreneurs from idea
+              to
+              execution, ensuring market fit.
+              .</p>
             <ul>
-              <li style="margin-top: 25px;">54%of YC's billion dollar companies had no revenue when they applied</li>
-              <li style="margin-top: 25px;">52%of YC's billion dollar company founders were under 28 years old and the
-                oldest founder was in their
-                50s</li>
-              <li style="margin-top: 25px;">42%of YC's billion dollar companies applied with only an idea</li>
+              <li style="margin-top: 25px;">Our team provides strategic advice on scaling your business and entering new
+                markets.
+              </li>
+              <li style="margin-top: 25px;">Continuous mentorship and support to navigate the challenges of
+                growing your startup.</li>
+              <li style="margin-top: 25px;"> Through iterative design cycles, we ensure the product meets user needs and
+                expectations.
+              </li>
             </ul>
           </div>
         </div>
@@ -1290,11 +1294,12 @@
   </div>
   <section class="section bg-cloudburst" style="padding: 9px 0;">
     <div class="wrapper container w-container">
-      <h2 class="text-color-dawnpink " style="text-align: center;">You Should Know Before Ambaincip.</h2>
+      <h2 class="text-color-dawnpink " style="text-align: center; font-family: Raleway;">You Should Know Before Joining
+        Ambaincip</h2>
 
       <div class="text-color-dawnpink">
         <div class="cardlist" style="display: flex; flex-wrap: wrap;">
-          <div style="flex: 1; padding: 10px; box-sizing: border-box;">
+          <div style="flex: 1; padding-left: 10px; box-sizing: border-box;">
             <ul style="list-style-type: none; padding-left: 10;">
               <li style="position: relative; padding-left: 20px; margin-bottom: 10px;">
                 You Should Have an At least Startup Idea.
