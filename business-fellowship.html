@@ -12,6 +12,59 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <style>
+     .footerClass {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+
+      }
+
+      .address {
+        max-width: 355px;
+      }
+
+      .footerLogo {
+        height: 95px;
+        width: 95px;
+      }
+
+
+
+    }
+
+    .faq-container {
+      padding: 20px;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    .faq-item {
+      cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      padding: 10px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+    }
+
+    .faq-item.active {
+      background-color: #ffffff;
+      border-color: #24315E;
+    }
+
+    .faq-question {
+      color: #fff;
+      margin-bottom: -15px;
+    }
+
+    .faq-item.active .faq-question {
+      color: #24315E;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 1px;
+      color: #555;
+    }
     @media (min-width:992px) {
       html.w-mod-js:not(.w-mod-ix) [data-w-id="8d43fc17-27e8-23be-d9ff-c627ffdd0c34"] {
         display: none;
@@ -249,7 +302,7 @@
         </div>
       </div>
     </div>
-    <div class="pop-up-modal">
+    <!-- <div class="pop-up-modal">
       <div class="pop-up-form ux">
         <div data-w-id="702dbb8a-47b9-903c-44a6-0d834f53d219" class="close-button"><img
             src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/65a4d2ee09fa07488adff242_maki_cross.svg"
@@ -350,7 +403,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
       role="banner" class="navbar w-nav">
       <div class="padding-global">
@@ -379,55 +432,7 @@
               <a href="community.html" class="navlink w-nav-link"><b>Community</b></a>
 
 
-
-              <a href="community.html" class="navlink w-nav-link"><b>Contact Us</b></a>
-              <a href="#faqs" class="navlink w-nav-link"><b>FAQs</b></a>
-              <a href="#" class="navlink hide w-nav-link">Hire from
-                Kairos</a>
-            </div>
-          </nav>
-          <div class="menu-button w-nav-button">
-            <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18"
-                fill="none">
-                <path
-                  d="M24 9C24 9.2046 23.9193 9.40081 23.7757 9.54548C23.632 9.69015 23.4372 9.77143 23.234 9.77143H0.765957C0.562813 9.77143 0.367989 9.69015 0.224344 9.54548C0.0806988 9.40081 0 9.2046 0 9C0 8.79541 0.0806988 8.59919 0.224344 8.45452C0.367989 8.30985 0.562813 8.22857 0.765957 8.22857H23.234C23.4372 8.22857 23.632 8.30985 23.7757 8.45452C23.9193 8.59919 24 8.79541 24 9ZM0.765957 1.54286H23.234C23.4372 1.54286 23.632 1.46158 23.7757 1.31691C23.9193 1.17224 24 0.976024 24 0.771429C24 0.566833 23.9193 0.370617 23.7757 0.225946C23.632 0.0812752 23.4372 0 23.234 0H0.765957C0.562813 0 0.367989 0.0812752 0.224344 0.225946C0.0806988 0.370617 0 0.566833 0 0.771429C0 0.976024 0.0806988 1.17224 0.224344 1.31691C0.367989 1.46158 0.562813 1.54286 0.765957 1.54286ZM23.234 16.4571H0.765957C0.562813 16.4571 0.367989 16.5384 0.224344 16.6831C0.0806988 16.8278 0 17.024 0 17.2286C0 17.4332 0.0806988 17.6294 0.224344 17.7741C0.367989 17.9187 0.562813 18 0.765957 18H23.234C23.4372 18 23.632 17.9187 23.7757 17.7741C23.9193 17.6294 24 17.4332 24 17.2286C24 17.024 23.9193 16.8278 23.7757 16.6831C23.632 16.5384 23.4372 16.4571 23.234 16.4571Z"
-                  fill="currentColor" />
-              </svg></div>
-          </div>
-        </div>
-      </div>
-      <div class="border"></div>
-    </div>
-    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-      role="banner" class="navbar w-nav">
-      <div class="padding-global">
-        <div class="container w-container" style="font-family: Raleway;"><a href="index.html" aria-current="page"
-            class="w-nav-brand w--current"><img src="./assets/image/navLogo.svg" height="65" width="165" loading="lazy"
-              alt="brand" /></a>
-          <nav role="navigation" class="nav-menu w-nav-menu">
-            <div class="navmenu_wrapper">
-              <a href="index.html" class="navlink w-nav-link"><b>Home</b></a>
-
-              <div data-hover="false" data-delay="0" data-w-id="f5d645ce-7812-d371-e566-8363df924cd7"
-                class="dropdown w-dropdown">
-                <div id="dropdown" class="navlink drop w-dropdown-toggle">
-                  <div class="inline"><b>Programmes</b></div>
-                  <div class="icon w-icon-dropdown-toggle"></div>
-                </div>
-                <nav class="dropdown-list w-dropdown-list">
-                  <div class="line hide"></div>
-                  <div class="relative flex-v"><a href="business-fellowship.html" class="navlink w-dropdown-link">Idea
-                      Designing Programme</a>
-                    <a href="marketing-fellowship.html" class="navlink w-dropdown-link">Startup Programme</a>
-                  </div>
-                </nav>
-              </div>
-              <a href="events.html" class="navlink hide w-nav-link">Events</a>
-              <a href="community.html" class="navlink w-nav-link"><b>Community</b></a>
-
-
-
-              <a href="community.html" class="navlink w-nav-link"><b>Contact Us</b></a>
+              <a href="contact.html" class="navlink w-nav-link"><b>Contact Us</b></a>
               <a href="#faqs" class="navlink w-nav-link"><b>FAQs</b></a>
               <a href="#" class="navlink hide w-nav-link">Hire from
                 Kairos</a>
@@ -1133,7 +1138,7 @@
                 </div>
                 <div class="max-width-280">
                   <div class="text-color-dawnpink text-align-center text-size-large">Want to know more about the rest of
-                    the curriculum?</div><a data-w-id="5cca31e0-755f-e4f1-aad6-1228d4851845" href="#"
+                    the curriculum?</div><a data-w-id="5cca31e0-755f-e4f1-aad6-1228d4851845" href="./assets/image/ideaDes.pdf"
                     class="download_brochure w-button">Download Brochure</a>
                 </div>
               </div>
@@ -1320,7 +1325,7 @@
                 </div>
                 <div id="w-node-_1bdb443b-4911-a021-6c33-9ab45cab53fa-9d7c9f72" class="div-block-7">
                   <div class="v-flex-10">
-                    <div class="uppercase text-size-small font-weight-medium letter-spacing-084">Not Regularly</div>
+                    <div class="uppercase text-size-small font-weight-medium letter-spacing-084">Working Days</div>
                     <div class="point">
                       <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="22"
                           viewBox="0 0 20 22" fill="none">
@@ -1504,58 +1509,40 @@
                       </div>
                       <div class="program-right-fee">
                         <div class="points">
-                          <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                              viewBox="0 0 24 24" fill="none">
-                              <path
-                                d="M17.25 20.2496C17.25 20.4485 17.171 20.6393 17.0303 20.7799C16.8897 20.9206 16.6989 20.9996 16.5 20.9996H7.49998C7.30107 20.9996 7.1103 20.9206 6.96965 20.7799C6.829 20.6393 6.74998 20.4485 6.74998 20.2496C6.74998 20.0507 6.829 19.8599 6.96965 19.7193C7.1103 19.5786 7.30107 19.4996 7.49998 19.4996H16.5C16.6989 19.4996 16.8897 19.5786 17.0303 19.7193C17.171 19.8599 17.25 20.0507 17.25 20.2496ZM21.5306 10.719L12.5306 1.71899C12.461 1.64926 12.3782 1.59394 12.2872 1.55619C12.1961 1.51845 12.0985 1.49902 12 1.49902C11.9014 1.49902 11.8038 1.51845 11.7128 1.55619C11.6217 1.59394 11.539 1.64926 11.4694 1.71899L2.46936 10.719C2.36435 10.8239 2.29282 10.9576 2.26383 11.1031C2.23485 11.2487 2.2497 11.3996 2.30651 11.5367C2.36333 11.6738 2.45955 11.791 2.58299 11.8734C2.70644 11.9558 2.85156 11.9997 2.99998 11.9996H6.74998V17.2496C6.74998 17.4485 6.829 17.6393 6.96965 17.7799C7.1103 17.9206 7.30107 17.9996 7.49998 17.9996H16.5C16.6989 17.9996 16.8897 17.9206 17.0303 17.7799C17.171 17.6393 17.25 17.4485 17.25 17.2496V11.9996H21C21.1484 11.9997 21.2935 11.9558 21.417 11.8734C21.5404 11.791 21.6366 11.6738 21.6934 11.5367C21.7503 11.3996 21.7651 11.2487 21.7361 11.1031C21.7071 10.9576 21.6356 10.8239 21.5306 10.719Z"
-                                fill="#24315E" />
-                            </svg></div>
+                          <div class="w-embed">
+                            <img src="./assets/image/icons8-experience-skill-48.png" alt="">
+                          </div>
                           <div class="text-size-medium">Elevate your skills and step into leadership roles across multiple sectors</div>
                         </div>
                         <div class="points">
-                          <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                              viewBox="0 0 24 24" fill="none">
-                              <path
-                                d="M11.2275 20.4316C11.187 20.5939 11.0933 20.7379 10.9615 20.8408C10.8297 20.9438 10.6673 20.9997 10.5 20.9997C10.4368 21 10.3738 20.9925 10.3125 20.9772L7.31251 20.2272C7.22899 20.2063 7.14971 20.1711 7.07814 20.1232L4.82814 18.6232C4.66267 18.5128 4.54783 18.3412 4.50889 18.1461C4.46994 17.951 4.51009 17.7485 4.62048 17.583C4.73088 17.4175 4.90249 17.3027 5.09755 17.2638C5.29262 17.2248 5.49517 17.265 5.66064 17.3754L7.80189 18.8032L10.6763 19.5222C10.7723 19.5455 10.8628 19.5876 10.9425 19.6459C11.0223 19.7043 11.0897 19.7778 11.1409 19.8623C11.1921 19.9468 11.2262 20.0406 11.241 20.1383C11.2559 20.236 11.2513 20.3357 11.2275 20.4316ZM23.6672 11.3885C23.6057 11.5754 23.5077 11.7483 23.379 11.8971C23.2502 12.046 23.0933 12.1678 22.9172 12.2557L20.6972 13.3657L19.2835 14.7804L15.5335 18.5304C15.4418 18.6219 15.328 18.6882 15.2031 18.7227C15.0783 18.7572 14.9466 18.7587 14.8209 18.7272L8.82095 17.2272C8.72971 17.2043 8.64354 17.1646 8.56689 17.11L3.36189 13.3938L1.08564 12.2557C0.72989 12.0778 0.459333 11.766 0.333457 11.3887C0.207581 11.0114 0.236691 10.5996 0.414388 10.2438L2.74408 5.58536C2.92191 5.22961 3.23375 4.95906 3.61103 4.83318C3.98831 4.7073 4.40013 4.73642 4.75595 4.91411L6.82408 5.94536L11.7928 4.52599C11.9276 4.48743 12.0705 4.48743 12.2053 4.52599L17.1741 5.94536L19.2422 4.91411C19.598 4.73642 20.0098 4.7073 20.3871 4.83318C20.7644 4.95906 21.0762 5.22961 21.2541 5.58536L23.5838 10.2438C23.6726 10.4196 23.7257 10.6113 23.7401 10.8078C23.7544 11.0043 23.7296 11.2016 23.6672 11.3885ZM17.625 14.3116L15.0272 12.2313C13.1953 13.7313 10.8694 13.9291 8.94189 12.7C8.75229 12.5794 8.5922 12.4178 8.47347 12.227C8.35473 12.0362 8.28038 11.8212 8.2559 11.5978C8.23142 11.3744 8.25744 11.1484 8.33204 10.9365C8.40664 10.7245 8.52791 10.532 8.68689 10.3732C8.68915 10.3704 8.69166 10.3679 8.69439 10.3657L12.9 6.28661L12 6.02974L7.27314 7.38067L4.7072 12.5116L9.3197 15.8069L14.7703 17.1691L17.625 14.3116ZM19.335 12.6016L16.7869 7.49974H13.8038L9.75001 11.4372C10.9369 12.1957 12.7978 12.4047 14.4675 10.7219C14.5979 10.5905 14.7723 10.5119 14.9572 10.5014C15.142 10.4908 15.3242 10.549 15.4688 10.6647L18.6947 13.2494L19.335 12.6016Z"
-                                fill="#24315E" />
-                            </svg></div>
+                          <div class="w-embed">
+                            <img src="./assets/image/icons8-helping-hand-48.png" alt="">
+                          </div>
                           <div class="text-size-medium">Network to discover your ideal co-founders and establish meaningful connections.</div>
                         </div>
                         <div class="points">
-                          <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                              viewBox="0 0 24 24" fill="none">
-                              <path
-                                d="M9.80276 17.566C9.76592 17.7124 8.84477 21.1618 3.77798 21.1618C3.57753 21.1618 3.38528 21.0822 3.24354 20.9404C3.1018 20.7987 3.02217 20.6064 3.02217 20.406C3.02217 15.3392 6.47151 14.418 6.61795 14.3812C6.81252 14.3326 7.01842 14.3633 7.19038 14.4665C7.36233 14.5697 7.48624 14.737 7.53485 14.9315C7.58346 15.1261 7.55279 15.332 7.44958 15.5039C7.34637 15.6759 7.17909 15.7998 6.98452 15.8484C6.89949 15.872 4.86635 16.4663 4.5697 19.6143C7.71766 19.3176 8.31286 17.2882 8.33743 17.1938C8.38754 16.9994 8.51279 16.833 8.68563 16.731C8.85847 16.6291 9.06473 16.5999 9.25905 16.65C9.45336 16.7002 9.61981 16.8254 9.72178 16.9983C9.82374 17.1711 9.85287 17.3774 9.80276 17.5717V17.566ZM18.5891 11.1983L18.1384 11.6489V17.1598C18.1396 17.359 18.1011 17.5565 18.0251 17.7408C17.9492 17.925 17.8375 18.0924 17.6963 18.233L14.4539 21.4736C14.314 21.6144 14.1477 21.7261 13.9645 21.8023C13.7812 21.8786 13.5847 21.9177 13.3863 21.9176C13.2225 21.9176 13.0598 21.8911 12.9044 21.8392C12.6377 21.751 12.401 21.5899 12.221 21.3742C12.041 21.1585 11.925 20.8967 11.886 20.6185L11.3786 16.9821L7.20182 12.8053L3.5673 12.298C3.28873 12.2589 3.02658 12.1429 2.81036 11.963C2.59413 11.783 2.4324 11.5463 2.34336 11.2795C2.25431 11.0127 2.24149 10.7263 2.30633 10.4526C2.37118 10.1788 2.51111 9.92863 2.71039 9.7301L5.95095 6.48766C6.0916 6.3465 6.25892 6.23471 6.44317 6.1588C6.62742 6.0829 6.82493 6.04438 7.0242 6.04551H12.535L12.9857 5.59485C15.5063 3.07516 18.5428 2.96651 19.7323 3.03737C20.1008 3.05976 20.4484 3.21626 20.7095 3.47733C20.9705 3.7384 21.127 4.08599 21.1494 4.45452C21.2184 5.6402 21.1097 8.67763 18.59 11.1983H18.5891ZM11.0234 7.55714H7.0242L3.77798 10.8015L7.28779 11.2909L11.0234 7.55714ZM16.6268 13.1606L12.8922 16.8952L13.3834 20.406L16.6268 17.1598V13.1606Z"
-                                fill="#24315E" />
-                            </svg></div>
+                          <div class="w-embed">
+                            <img src="./assets/image/icons8-graduation-scroll-48.png" alt="">
+                          </div>
                           <div class="text-size-medium">Graduate with a finalized MVP and a detailed market entry strategy
                           </div>
                         </div>
                         <div class="points">
-                          <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                              viewBox="0 0 24 24" fill="none">
-                              <path
-                                d="M23.0625 11.0016L19.6875 14.7516C19.6166 14.8304 19.5298 14.8933 19.4329 14.9361C19.3359 14.9789 19.231 15.0007 19.125 15H12.75V21C12.75 21.1989 12.671 21.3897 12.5303 21.5303C12.3897 21.671 12.1989 21.75 12 21.75C11.8011 21.75 11.6103 21.671 11.4697 21.5303C11.329 21.3897 11.25 21.1989 11.25 21V15H3.75C3.35218 15 2.97064 14.842 2.68934 14.5607C2.40804 14.2794 2.25 13.8978 2.25 13.5V7.5C2.25 7.10218 2.40804 6.72064 2.68934 6.43934C2.97064 6.15804 3.35218 6 3.75 6H11.25V3C11.25 2.80109 11.329 2.61032 11.4697 2.46967C11.6103 2.32902 11.8011 2.25 12 2.25C12.1989 2.25 12.3897 2.32902 12.5303 2.46967C12.671 2.61032 12.75 2.80109 12.75 3V6H19.125C19.231 5.99931 19.3359 6.0211 19.4329 6.06392C19.5298 6.10674 19.6166 6.16963 19.6875 6.24844L23.0625 9.99844C23.1864 10.1361 23.2549 10.3148 23.2549 10.5C23.2549 10.6852 23.1864 10.8639 23.0625 11.0016Z"
-                                fill="#24315E" />
-                            </svg></div>
+                          <div class="w-embed">
+                            <img src="./assets/image/icons8-pyramid-toy-48.png" alt="">
+                          </div>
                           <div class="text-size-medium">Enjoy customized, flexible online learning tailored for modern professionals.</div>
                         </div>
                         <div class="points">
-                          <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24"
-                              viewBox="0 0 20 24" fill="none">
-                              <path
-                                d="M18.3571 15.9427H17.7143V7.02838C17.7143 6.43732 17.5111 5.87048 17.1494 5.45254C16.7877 5.0346 16.2972 4.7998 15.7857 4.7998H4.21429C3.7028 4.7998 3.21226 5.0346 2.85058 5.45254C2.4889 5.87048 2.28571 6.43732 2.28571 7.02838V15.9427H1.64286C1.47236 15.9427 1.30885 16.0209 1.18829 16.1602C1.06773 16.2996 1 16.4885 1 16.6855V18.1712C1 18.7623 1.20319 19.3291 1.56487 19.7471C1.92654 20.165 2.41708 20.3998 2.92857 20.3998H17.0714C17.5829 20.3998 18.0735 20.165 18.4351 19.7471C18.7968 19.3291 19 18.7623 19 18.1712V16.6855C19 16.4885 18.9323 16.2996 18.8117 16.1602C18.6912 16.0209 18.5276 15.9427 18.3571 15.9427ZM8.71429 7.02838H11.2857C11.4562 7.02838 11.6197 7.10664 11.7403 7.24595C11.8608 7.38527 11.9286 7.57422 11.9286 7.77123C11.9286 7.96825 11.8608 8.1572 11.7403 8.29651C11.6197 8.43582 11.4562 8.51409 11.2857 8.51409H8.71429C8.54379 8.51409 8.38028 8.43582 8.25972 8.29651C8.13916 8.1572 8.07143 7.96825 8.07143 7.77123C8.07143 7.57422 8.13916 7.38527 8.25972 7.24595C8.38028 7.10664 8.54379 7.02838 8.71429 7.02838ZM17.7143 18.1712C17.7143 18.3683 17.6466 18.5572 17.526 18.6965C17.4054 18.8358 17.2419 18.9141 17.0714 18.9141H2.92857C2.75808 18.9141 2.59456 18.8358 2.474 18.6965C2.35344 18.5572 2.28571 18.3683 2.28571 18.1712V17.4284H17.7143V18.1712Z"
-                                fill="#24315E" />
-                            </svg></div>
+                          <div class="w-embed">
+                            <img src="./assets/image/icons8-key-48.png" alt="">
+                          </div>
                           <div class="text-size-medium">Unlock career opportunities in startup roles like Founder's Office and Chief of Staff.</div>
                         </div>
                         <div class="points">
-                          <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                              viewBox="0 0 21 21" fill="none">
-                              <path
-                                d="M10.5 1.96875C8.81268 1.96875 7.16325 2.4691 5.7603 3.40652C4.35734 4.34395 3.26387 5.67635 2.61816 7.23523C1.97245 8.79411 1.8035 10.5095 2.13268 12.1644C2.46186 13.8193 3.27438 15.3394 4.4675 16.5325C5.66062 17.7256 7.18074 18.5381 8.83564 18.8673C10.4905 19.1965 12.2059 19.0276 13.7648 18.3818C15.3237 17.7361 16.6561 16.6427 17.5935 15.2397C18.5309 13.8368 19.0313 12.1873 19.0313 10.5C19.0289 8.2381 18.1293 6.06954 16.5299 4.47013C14.9305 2.87073 12.7619 1.97114 10.5 1.96875ZM5.10973 15.2964L5.31645 15.161C5.49696 15.0419 5.64526 14.8801 5.74815 14.6899C5.85105 14.4997 5.90536 14.2871 5.90625 14.0708L5.92348 11.0988L7.64286 8.53125C7.65128 8.53773 7.66004 8.54376 7.66911 8.5493L9.28266 9.60504C9.55307 9.79589 9.88579 9.87709 10.2137 9.83227L12.7969 9.48199C13.1154 9.43948 13.4073 9.28157 13.6172 9.0382L15.4358 6.92508C15.6392 6.68678 15.7506 6.3836 15.75 6.07031V5.55105C16.6376 6.49014 17.2565 7.65058 17.5418 8.91088C17.8271 10.1712 17.7684 11.485 17.3718 12.7148L16.0478 11.5041C15.8637 11.3351 15.6353 11.2222 15.3892 11.1786C15.1432 11.135 14.8899 11.1626 14.659 11.258L12.1603 12.2957C11.9514 12.3834 11.7686 12.5234 11.6295 12.7023C11.4904 12.8812 11.3997 13.0929 11.3663 13.317L11.1702 14.645C11.1231 14.9647 11.1955 15.2905 11.3737 15.5601C11.5518 15.8297 11.8232 16.024 12.1357 16.106L13.8961 16.5703L14.0897 16.7647C12.6522 17.5895 10.9744 17.8938 9.33877 17.6264C7.70317 17.3589 6.20967 16.5361 5.10973 15.2964Z"
-                                fill="#24315E" />
-                            </svg></div>
+                          <div class="w-embed">
+                            <img src="./assets/image/icons8-helping-hand-48.png" alt="">
+                          </div>
                           <div class="text-size-medium">Join an energetic community of trailblazing founders and industry professionals.</div>
                         </div>
                       </div>
@@ -1730,8 +1717,7 @@
                   <div data-hover="false" data-delay="0" data-w-id="8835d254-a05e-a6f8-cb36-c14eae8da87d"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">What is the duration of the
-                        programme? </div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">What is the duration of the programme? </div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>
@@ -1747,8 +1733,7 @@
                   <div data-hover="false" data-delay="0" data-w-id="8835d254-a05e-a6f8-cb36-c14eae8da87d"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">How is the programme structured?
-                      </div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">How is the programme structured?  </div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>
@@ -1761,13 +1746,12 @@
                       </div>
                     </nav>
                   </div>
-
-
+  
+  
                   <div data-hover="false" data-delay="0" data-w-id="7b473016-76af-5fc7-86b1-2e4fcf0e9789"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">What are the key topics covered in
-                        the programme?</div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">What are the key topics covered in the programme?</div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>
@@ -1784,8 +1768,7 @@
                   <div data-hover="false" data-delay="0" data-w-id="8835d254-a05e-a6f8-cb36-c14eae8da87d"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">How many participants are there per
-                        batch?</div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">How many participants are there per batch?</div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>
@@ -1801,8 +1784,7 @@
                   <div data-hover="false" data-delay="0" data-w-id="ca92b1d3-a096-86ac-2ba5-329a4ac51454"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">Will I receive a certificate upon
-                        completion of the programme? </div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">Will I receive a certificate upon  completion of the programme? </div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>
@@ -1818,8 +1800,7 @@
                   <div data-hover="false" data-delay="0" data-w-id="ca92b1d3-a096-86ac-2ba5-329a4ac51454"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">Is the programme suitable for
-                        working professionals? </div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">Is the programme suitable for  working professionals? </div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>

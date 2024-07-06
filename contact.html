@@ -31,6 +31,61 @@
     <script defer src="./cdn.jsdelivr.net/npm/%40finsweet/attributes-numbercount%401/numbercount.js"></script>
 
 </head>
+<style>
+    .footerClass {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+
+    }
+
+    .address {
+        max-width: 355px;
+    }
+
+    .footerLogo {
+        height: 95px;
+        width: 95px;
+    }
+
+
+
+    }
+
+    .faq-container {
+        padding: 20px;
+        border-radius: 8px;
+        margin: 10px;
+    }
+
+    .faq-item {
+        cursor: pointer;
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        padding: 10px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+    }
+
+    .faq-item.active {
+        background-color: #ffffff;
+        border-color: #24315E;
+    }
+
+    .faq-question {
+        color: #fff;
+        margin-bottom: -15px;
+    }
+
+    .faq-item.active .faq-question {
+        color: #24315E;
+    }
+
+    .faq-answer {
+        display: none;
+        margin-top: 1px;
+        color: #555;
+    }
+</style>
 
 <body>
     <div class="page-wrapper"><img
