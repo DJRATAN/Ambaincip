@@ -32,58 +32,37 @@
 
 </head>
 <style>
-    .footerClass {
-        display: flex;
-        gap: 0;
-        flex-direction: column;
-
+    @media (min-width:992px) {
+        v html.w-mod-js:not(.w-mod-ix) [data-w-id="c1b17e1c-2840-b145-8fdb-6b16fd04868f"] {
+            opacity: 0;
+        }
     }
 
-    .address {
-        max-width: 355px;
+    @media only screen and (max-width: 750px) {
+        .cardlist {
+            flex-direction: column;
+            padding-left: 10px;
+        }
+
+        .footerClass {
+            display: flex;
+            gap: 0;
+            flex-direction: column;
+        }
+
+        .address {
+            margin-top: 80px !important;
+            max-width: 355px;
+        }
+
+        .footerLogo {
+            height: 95px;
+            width: 95px;
+        }
     }
 
-    .footerLogo {
-        height: 95px;
-        width: 95px;
-    }
-
-
-
-    }
-
-    .faq-container {
-        padding: 20px;
-        border-radius: 8px;
-        margin: 10px;
-    }
-
-    .faq-item {
-        cursor: pointer;
-        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-        padding: 10px;
-        border: 2px solid transparent;
-        border-radius: 8px;
-    }
-
-    .faq-item.active {
-        background-color: #ffffff;
-        border-color: #24315E;
-    }
-
-    .faq-question {
-        color: #fff;
-        margin-bottom: -15px;
-    }
-
-    .faq-item.active .faq-question {
-        color: #24315E;
-    }
-
-    .faq-answer {
-        display: none;
-        margin-top: 1px;
-        color: #555;
+    .footerClassdig {
+        margin-top: -105px;
     }
 </style>
 
@@ -125,9 +104,7 @@
 
 
                             <a href="contact.html" class="navlink w-nav-link"><b>Contact Us</b></a>
-                            <a href="#faqs" class="navlink w-nav-link"><b>FAQs</b></a>
-                            <a href="#" class="navlink hide w-nav-link">Hire from
-                                Kairos</a>
+
                         </div>
                     </nav>
                     <div class="menu-button w-nav-button">
@@ -320,10 +297,11 @@
                     <div class="footer_wrap">
                         <div class="v-flex-18">
                             <div class="v-flex-12">
-                                <h3 class="text-size-xlarge">Be on top of the business game with our newsletter! 🚀</h3>
-                                <div class="max-width-488">Get weekly shots of business in your inbox. Stories around
-                                    startups,
-                                    leaderships, industry reports.</div>
+                                <h3 class="text-size-xlarge">Stay informed with the latest industry trends and company
+                                    announcements.</h3>
+                                <div class="max-width-488">Get Your Weekly Business Update: Insights on Startups,
+                                    Leadership, and Industry
+                                    Trends</div>
                             </div>
                             <div class="v-flex-12">
                                 <div class="form-block w-form">
@@ -421,14 +399,14 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="footer-content"><a href="index.html" aria-current="page"
+                        <div style="margin-top: -25px;" class="footer-content"><a href="index.html" aria-current="page"
                                 class="w-inline-block w--current"><img src="./assets/image/navLogo.svg" loading="lazy"
                                     alt="brand" /></a><a href="privacy-policy.html" class="privacy">Privacy Policy</a><a
                                 href="refund-policy.html" class="privacy">Refund Policy</a></div>
                     </div>
-                    <div class="address" style="margin-bottom: 25px; margin-top: 80px;">
-                        <div>
-                            <h3 text-size-xlarge style="margin: -15px 0 0 0;">Co-Working Office Location</h3>
+                    <div class="address" style="margin-bottom: 25px; margin-top: 170px;">
+                        <div class="footerClassdig">
+                            <h3 text-size-xlarge>Co-Working Office Location</h3>
                             <div>
                                 <br> Helios Business Park
                                 Level 6
@@ -441,8 +419,6 @@
                 </div>
             </div>
         </section>
-
-
     </div>
     <script src="./d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8e394.js?site=6596416fc1d5c1ea18fbe817"
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="

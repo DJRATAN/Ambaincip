@@ -12,59 +12,6 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <style>
-     .footerClass {
-        display: flex;
-        gap: 0;
-        flex-direction: column;
-
-      }
-
-      .address {
-        max-width: 355px;
-      }
-
-      .footerLogo {
-        height: 95px;
-        width: 95px;
-      }
-
-
-
-    }
-
-    .faq-container {
-      padding: 20px;
-      border-radius: 8px;
-      margin: 10px;
-    }
-
-    .faq-item {
-      cursor: pointer;
-      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-      padding: 10px;
-      border: 2px solid transparent;
-      border-radius: 8px;
-    }
-
-    .faq-item.active {
-      background-color: #ffffff;
-      border-color: #24315E;
-    }
-
-    .faq-question {
-      color: #fff;
-      margin-bottom: -15px;
-    }
-
-    .faq-item.active .faq-question {
-      color: #24315E;
-    }
-
-    .faq-answer {
-      display: none;
-      margin-top: 1px;
-      color: #555;
-    }
     @media (min-width:992px) {
       html.w-mod-js:not(.w-mod-ix) [data-w-id="8d43fc17-27e8-23be-d9ff-c627ffdd0c34"] {
         display: none;
@@ -119,6 +66,41 @@
         -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);
         transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);
       }
+    }
+
+    @media only screen and (max-width: 750px) {
+      .cardlist {
+        flex-direction: column;
+        padding-left: 10px;
+      }
+
+      .footerClass {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+      }
+      .flip{
+        display: block !important;
+      }      .over1{
+        display: none;
+      }
+
+      .address {
+        margin-top: 80px !important;
+        max-width: 355px;
+      }
+
+      .footerLogo {
+        height: 95px;
+        width: 95px;
+      }
+      .over1{
+        display: none;
+      }
+    }
+
+    .footerClassdig {
+      margin-top: -105px;
     }
   </style>
   <link href="https://fonts.googleapis.com/" rel="preconnect" />
@@ -656,43 +638,41 @@
         <div class="padding-global right-0">
           <div class="w-layout-blockcontainer container w-container">
             <div class="padding-section-medium">
-              <div class="wrapper gap-60">
+              <div class="wrapper">
                 <div class="content_block">
                   <div class="content right-20">
-                    <h2 class="text-color-dawnpink">Idea Designing Programme </h2>
-                    <p class="text-color-dawnpink">Cultivating Innovation from Concept to Execution</p>
+                    <h2 class="text-color-dawnpink">Startup Programme Overview:</h2>
 
                   </div>
                 </div>
                 <div class="disrupt-wrapper" style="display: flex; align-items: center; justify-content: center;">
-                  <div class=" ">
+                  <div class=" over1">
                     <img src="./assets/image/overview.svg" alt="" width="400">
                   </div>
                   <div class=" text-color-dawnpink"
                     style="width: 100%; display: flex; flex-direction: column; justify-content: space-evenly; ">
-                    <h3 style="margin-bottom: 20px;">Programme overview:</h3>
-                    <p>The Idea Designing Programme at the Ambaincip School of Startups is a transformative
-                      journey designed for individuals eager to cultivate their creativity and entrepreneurial
-                      spirit. Spanning six months, this program equips participants with essential skills and
-                      knowledge to conceptualize, refine, and launch innovative ideas into viable products or
-                      solutions. </p>
-                    <p>
-
-                      Through a blend of theoretical learning and hands-on practical experience,
-                      participants will explore ideation techniques, market research, prototyping, and business
-                      model development. Expert mentors and industry professionals guide and inspire
-                      throughout the program, fostering a supportive learning environment. </p>
-                    <p> By the end of the
-                      programme, participants emerge with a comprehensive understanding of idea design and
-                      the confidence to embark on entrepreneurial ventures. Whether you're a recent graduate
-                      or aiming to transition into the startup ecosystem, this programme empowers you to turn
-                      your ideas into reality.
+                    <h3 style="margin-bottom: 20px;">Programme Overview</h3>
+                    <p>The Startup Programme spans 12 months, offering aspiring entrepreneurs a structured path
+                      from initial idea to market launch. Participants embark on a journey that begins with idea
+                      conception and validation, leveraging rigorous market research and feasibility studies to ensure
+                      viability.
                     </p>
+                    <p>Through guided business planning and development phases, they refine their visions
+                      into detailed business models and prototypes.
+                    </p>
+                    <p>Strategic go-to-market planning follows, focusing
+                      on marketing, sales, and operational readiness. Upon launch, tailored support and mentorship
+                      facilitate growth, while strategies for scaling and sustainability ensure long-term success.
+                    </p>
+                    <p>By
+                      program completion, participants are equipped with the skills, insights, and network needed to
+                      confidently navigate the entrepreneurial landscape and establish their startups in the market.</p>
                   </div>
                 </div>
+
                 <div class="content_block">
                   <div class="content right-20">
-                    <h2 class="text-color-dawnpink">Programme Duration and Outcome</h2>
+                    <h2 class="text-color-dawnpink" style="margin-top: -15px; margin-bottom: -95px;">Outcome:</h2>
 
                   </div>
                 </div>
@@ -700,111 +680,110 @@
 
                   <div class=" text-color-dawnpink"
                     style="width: 100%; display: flex; flex-direction: column; justify-content: space-evenly; ">
-                    <h3 style="margin-bottom: 20px; margin-top: -65px;">Programme overview: </h3>
-                    <p>The Idea Designing Programme at the Ambaincip School of Startups spans a rigorous
-                      six-month duration, ensuring ample time for participants to refine their ideas and assess
-                      their viability in the market. </p>
-                    <p>Through structured learning modules, practical workshops,
-                      and mentorship, participants gain the tools and insights needed to thoroughly evaluate
-                      their ideas. Emphasis is placed on conducting market research, developing prototypes,
-                      and testing concepts to validate their potential success. </p>
-                    <p> By the end of the programme,
-                      participants will have a clear understanding of whether their ideas have market viability,
-                      equipping them with the knowledge and confidence to make informed entrepreneurial
-                      decisions. This intensive approach aims to empower participants to pursue promising
-                      ventures with a solid foundation of validation and readiness.</p>
+                    <h3 style="margin-bottom: 20px;">Programme Overview</h3>
+                    <p>The ultimate outcome of the 12-month Startup Programme is the successful establishment of
+                      startups with fully formed teams and market-ready products.
+                    </p>
+                    <p>Participants will have developed
+                      robust business plans, refined their product or service offerings through prototyping and testing,
+                      and implemented strategic go-to-market strategies.
+                    </p>
+                    <p>By the end of the programme, startups will
+                      be positioned to launch confidently into the market, equipped with the necessary resources,
+                      skills, and support networks to navigate challenges and capitalize on opportunities for growth
+                      and sustainability.
+                    </p>
                   </div>
-                  <div class=" ">
+                  <div class="over1 ">
                     <img src="./assets/image/overview2.svg" alt="" width="400">
-                  </div>
-                </div>
-
-
-
-
-
-
-
-
-
-                <div data-w-id="fec76a01-0936-910a-8523-b259b58df5df"
-                  class="wrapper margin-bottom-120 padding-right-20">
-                  <div id="w-node-fec76a01-0936-910a-8523-b259b58df604-18fbe81f" class="v-flex-16">
-                    <div class="v-flex-8">
-                      <h2 class="text-color-dawnpink text-size-large">Learn From The Best Brands People</h2>
-                      <div class="text-color-dawnpink text-size-medium">Insights from Leading Brands and Industry
-                        Experts
-                      </div>
-                    </div>
-                    <div class="logos">
-                      <div class="logo-wrap"><img src="./assets/image/logoCom.svg" loading="lazy" alt=""
-                          class="image-11" />
-                      </div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (3).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (4).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (5).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (6).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (7).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (8).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (9).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (10).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (24).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (11).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (12).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (13).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (14).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (15).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (16).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (17).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (18).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (19).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (20).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (21).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (22).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (23).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (25).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (26).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (27).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (28).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-                      <div class="logo-wrap"><img src="./assets/image/logoCom (29).svg" loading="lazy" alt=""
-                          class="image-11" /></div>
-
-
-                    </div>
-                    <div class="margin-top-24"><a href="community.html" class="ternary_btn w-button">Learn more about
-                        the
-                        Community</a></div>
                   </div>
                 </div>
               </div>
 
+
+
+
+
+
+
+
+
+              <div data-w-id="fec76a01-0936-910a-8523-b259b58df5df" class="wrapper margin-bottom-120 padding-right-20">
+                <div id="w-node-fec76a01-0936-910a-8523-b259b58df604-18fbe81f" class="v-flex-16">
+                  <div class="v-flex-8">
+                    <h2 class="text-color-dawnpink text-size-large">Fellows from the best brands</h2>
+                    <div class="text-color-dawnpink text-size-medium">Network with people working at your dream
+                      company
+                    </div>
+                  </div>
+                  <div class="logos">
+                    <div class="logo-wrap"><img src="./assets/image/logoCom.svg" loading="lazy" alt=""
+                        class="image-11" />
+                    </div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (3).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (4).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (5).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (6).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (7).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (8).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (9).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (10).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (24).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (11).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (12).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (13).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (14).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (15).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (16).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (17).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (18).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (19).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (20).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (21).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (22).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (23).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (25).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (26).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (27).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (28).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+                    <div class="logo-wrap"><img src="./assets/image/logoCom (29).svg" loading="lazy" alt=""
+                        class="image-11" /></div>
+
+
+                  </div>
+                  <div class="margin-top-24"><a href="community.html" class="ternary_btn w-button">Learn more about
+                      the
+                      Community</a></div>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -1138,8 +1117,8 @@
                 </div>
                 <div class="max-width-280">
                   <div class="text-color-dawnpink text-align-center text-size-large">Want to know more about the rest of
-                    the curriculum?</div><a data-w-id="5cca31e0-755f-e4f1-aad6-1228d4851845" href="./assets/image/ideaDes.pdf"
-                    class="download_brochure w-button">Download Brochure</a>
+                    the curriculum?</div><a data-w-id="5cca31e0-755f-e4f1-aad6-1228d4851845"
+                    href="./assets/image/ideaDes.pdf" class="download_brochure w-button">Download Brochure</a>
                 </div>
               </div>
             </div>
@@ -1388,7 +1367,7 @@
                   <h2>Meetup Activities <span class="italic"></span></h2>
                   <div>Real connections are forged in-person. Network with the change-makers.</div>
                 </div>
-                <div style="display: flex;">
+                <div style="display: flex;" class="flip">
                   <div style="margin: 25px; background-color: #24315e; padding: 25px; border-radius: 10px;"><img
                       src="./assets/image/off1.svg" alt="">
                     <div class="advantage-content" style="margin-top: 25px;">
@@ -1438,7 +1417,7 @@
                             class="image lumanisity" /></div>
                       </div>
                       <div class="program-right">
-                      
+
                         <ul role="list" class="list">
                           <li class="list-item">Complete the program with a market-ready MVP and a strategic plan for
                             market entry.</li>
@@ -1491,12 +1470,12 @@
                     <div id="w-node-_9dc10922-d065-f5d2-b518-bd5909a9fd7b-9d7c9f72" class="bg-blur"></div>
                     <div id="w-node-_9dc10922-d065-f5d2-b518-bd5909a9fd7c-9d7c9f72" class="program-card-fee">
                       <div data-w-id="9dc10922-d065-f5d2-b518-bd5909a9fd7d" class="program-left-fee">
-                        <div class="program-image-wrap"><img
-                            src="./assets/image/fellow.svg"
-                            loading="lazy" alt="" class="image screen" /></div> 
+                        <div class="program-image-wrap"><img src="./assets/image/fellow.svg" loading="lazy" alt=""
+                            class="image screen" /></div>
                         <div class="max-width-278">
                           <div class="program-names-fee">
-                            <div class="font-size-24 text-color-dawnpink text-align-center">Achieve your goals with our Idea Designing Programme Cost At</div>
+                            <div class="font-size-24 text-color-dawnpink text-align-center">Achieve your goals with our
+                              Idea Designing Programme Cost At</div>
                             <div class="price">₹9,999 <span class="text-size-small font-spline">+ GST</span></div>
                           </div>
                           <div data-w-id="5e55ca5e-4bc0-32ab-07f8-1d6136880d3e" class="button-wrapper">
@@ -1505,45 +1484,51 @@
                               <div>  Apply Now  </div>
                             </a>
                           </div>
-                        </div>  
+                        </div>
                       </div>
                       <div class="program-right-fee">
                         <div class="points">
                           <div class="w-embed">
                             <img src="./assets/image/icons8-experience-skill-48.png" alt="">
                           </div>
-                          <div class="text-size-medium">Elevate your skills and step into leadership roles across multiple sectors</div>
+                          <div class="text-size-medium">Elevate your skills and step into leadership roles across
+                            multiple sectors</div>
                         </div>
                         <div class="points">
                           <div class="w-embed">
                             <img src="./assets/image/icons8-helping-hand-48.png" alt="">
                           </div>
-                          <div class="text-size-medium">Network to discover your ideal co-founders and establish meaningful connections.</div>
+                          <div class="text-size-medium">Network to discover your ideal co-founders and establish
+                            meaningful connections.</div>
                         </div>
                         <div class="points">
                           <div class="w-embed">
                             <img src="./assets/image/icons8-graduation-scroll-48.png" alt="">
                           </div>
-                          <div class="text-size-medium">Graduate with a finalized MVP and a detailed market entry strategy
+                          <div class="text-size-medium">Graduate with a finalized MVP and a detailed market entry
+                            strategy
                           </div>
                         </div>
                         <div class="points">
                           <div class="w-embed">
                             <img src="./assets/image/icons8-pyramid-toy-48.png" alt="">
                           </div>
-                          <div class="text-size-medium">Enjoy customized, flexible online learning tailored for modern professionals.</div>
+                          <div class="text-size-medium">Enjoy customized, flexible online learning tailored for modern
+                            professionals.</div>
                         </div>
                         <div class="points">
                           <div class="w-embed">
                             <img src="./assets/image/icons8-key-48.png" alt="">
                           </div>
-                          <div class="text-size-medium">Unlock career opportunities in startup roles like Founder's Office and Chief of Staff.</div>
+                          <div class="text-size-medium">Unlock career opportunities in startup roles like Founder's
+                            Office and Chief of Staff.</div>
                         </div>
                         <div class="points">
                           <div class="w-embed">
                             <img src="./assets/image/icons8-helping-hand-48.png" alt="">
                           </div>
-                          <div class="text-size-medium">Join an energetic community of trailblazing founders and industry professionals.</div>
+                          <div class="text-size-medium">Join an energetic community of trailblazing founders and
+                            industry professionals.</div>
                         </div>
                       </div>
                     </div>
@@ -1733,7 +1718,7 @@
                   <div data-hover="false" data-delay="0" data-w-id="8835d254-a05e-a6f8-cb36-c14eae8da87d"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">How is the programme structured?  </div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">How is the programme structured? </div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>
@@ -1746,12 +1731,12 @@
                       </div>
                     </nav>
                   </div>
-  
-  
+
+
                   <div data-hover="false" data-delay="0" data-w-id="7b473016-76af-5fc7-86b1-2e4fcf0e9789"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">What are the key topics covered in the programme?</div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">What are the key topics covered in  the programme?</div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>
@@ -1784,7 +1769,7 @@
                   <div data-hover="false" data-delay="0" data-w-id="ca92b1d3-a096-86ac-2ba5-329a4ac51454"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">Will I receive a certificate upon  completion of the programme? </div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">Will I receive a certificate upon completion of the programme? </div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>
@@ -1800,7 +1785,7 @@
                   <div data-hover="false" data-delay="0" data-w-id="ca92b1d3-a096-86ac-2ba5-329a4ac51454"
                     class="faq w-dropdown">
                     <div class="dropdown-toggle w-dropdown-toggle">
-                      <div class="text-color-cloudburst pre-wrap font-weight-medium">Is the programme suitable for  working professionals? </div>
+                      <div class="text-color-cloudburst pre-wrap font-weight-medium">Is the programme suitable for working professionals? </div>
                       <div
                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
                         class="dopicon w-icon-dropdown-toggle"></div>
@@ -1825,9 +1810,11 @@
             <div class="footer_wrap">
               <div class="v-flex-18">
                 <div class="v-flex-12">
-                  <h3 class="text-size-xlarge">Be on top of the business game with our newsletter! 🚀</h3>
-                  <div class="max-width-488">Get weekly shots of business in your inbox. Stories around startups,
-                    leaderships, industry reports.</div>
+                  <h3 class="text-size-xlarge">Stay informed with the latest industry trends and company
+                    announcements.</h3>
+                  <div class="max-width-488">Get Your Weekly Business Update: Insights on Startups,
+                    Leadership, and Industry
+                    Trends</div>
                 </div>
                 <div class="v-flex-12">
                   <div class="form-block w-form">
@@ -1922,14 +1909,14 @@
                   </div>
                 </a>
               </div>
-              <div class="footer-content"><a href="index.html" aria-current="page"
+              <div style="margin-top: -25px;" class="footer-content"><a href="index.html" aria-current="page"
                   class="w-inline-block w--current"><img src="./assets/image/navLogo.svg" loading="lazy"
                     alt="brand" /></a><a href="privacy-policy.html" class="privacy">Privacy Policy</a><a
                   href="refund-policy.html" class="privacy">Refund Policy</a></div>
             </div>
-            <div class="address" style="margin-bottom: 25px; margin-top: 80px;">
-              <div>
-                <h3 text-size-xlarge style="margin: -15px 0 0 0;">Co-Working Office Location</h3>
+            <div class="address" style="margin-bottom: 25px; margin-top: 170px;">
+              <div class="footerClassdig">
+                <h3 text-size-xlarge>Co-Working Office Location</h3>
                 <div>
                   <br> Helios Business Park
                   Level 6
