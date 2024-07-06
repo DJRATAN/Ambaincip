@@ -1,6 +1,10 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-import { getFirestore, addDoc, collection } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+// firebase.js
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+import { addDoc, collection } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB4JdeqE3GapZOiAfERpEu75PZcIhzkwv8",
   authDomain: "aimlcampus-e8bed.firebaseapp.com",
@@ -15,6 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const applyForm = document.getElementById("apply-form");
   const formErrorMessage = document.getElementById("form-error");
@@ -28,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const application = {};
 
     for (let [key, value] of formData.entries()) {
-      if (!value) {
+      if (!value && key !== "Linkedin" && key !== "Referred") {
         errorKeys.push(applyForm[key].placeholder);
       }
       application[key] = value;
@@ -40,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      await addDoc(collection(db, "applications"), application);
+      await addDoc(collection(db, "ambaincipData"), application);
       formSuccessMessage.style.color = "#370909";
       formSuccessMessage.innerHTML = "Successfully Submitted. See You at AiML Campus!!!";
       applyForm.reset();
@@ -52,40 +57,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Second form submission handling
+const subscribeForm = document.getElementById("wf-form-second-form");
+const subscribeSuccessMessage = document.getElementById("subscribe-success");
+const subscribeErrorMessage = document.getElementById("subscribe-error");
 
-// contact form 
-document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.getElementById("contactForm");
-  const formErrorMessage = document.getElementById("form-error");
-  const formSuccessMessage = document.getElementById("form-success");
+subscribeForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-  contactForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  const formData = new FormData(subscribeForm);
+  const subscription = {};
 
-    const formData = new FormData(contactForm);
-    const errorKeys = [];
-    const contactData = {};
+  for (let [key, value] of formData.entries()) {
+    subscription[key] = value;
+  }
 
-    for (let [key, value] of formData.entries()) {
-      if (!value) {
-        errorKeys.push(contactForm[key].placeholder);
-      }
-      contactData[key] = value;
-    }
-
-    if (errorKeys.length) {
-      formErrorMessage.innerHTML = "<b>These fields are required:</b><br/>" + errorKeys.join(", ");
-      return;
-    }
-
-    try {
-      await addDoc(collection(db, "contactData"), contactData);
-      formSuccessMessage.style.color = "#370909";
-      formSuccessMessage.innerHTML = "Successfully Submitted. See You at AiML Campus!!!";
-      contactForm.reset();
-    } catch (error) {
-      formErrorMessage.innerHTML = "Error submitting form: " + error.message;
-      console.error("Error adding document: ", error);
-    }
-  });
+  try {
+    await addDoc(collection(db, "subscriptions"), subscription);
+    subscribeSuccessMessage.style.display = 'block';
+    subscribeErrorMessage.style.display = 'none';
+    subscribeForm.reset();
+  } catch (error) {
+    subscribeErrorMessage.innerHTML = "Error submitting form: " + error.message;
+    subscribeSuccessMessage.style.display = 'none';
+    subscribeErrorMessage.style.display = 'block';
+    console.error("Error adding document: ", error);
+  }
 });
+
+

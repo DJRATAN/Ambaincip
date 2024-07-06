@@ -187,8 +187,8 @@
                                     class="submit_button w-button" value="Submit" />
                             </form>
                             <div class="custom-success w-form-done">
-                                <h1 class="margin-bottom-10">Redirecting to Calendly</h1>
-                                <div>Choose an Interview Slot</div>
+                                <h1 class="margin-bottom-10">Thank You for Your Response</h1>
+                                <div>Our Team will Contact You</div>
                             </div>
                             <div class="error-message w-form-fail">
                                 <div>Oops! Something went wrong while submitting the form.</div>
@@ -234,52 +234,7 @@
                                         <div>Oops! Something went wrong while submitting the form.</div>
                                     </div>
                                 </div>
-                                <div class="w-embed w-script">
-                                    <script>
-                                        async function submit() {
-                                            const form_email = document.getElementById("email").value;
-                                            // Get current date and time in IST
-                                            const currentISTDate = new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' });
-                                            const currentISTTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
-                                            const userData = {
-                                                email: form_email,
-                                                courseKey: 'kairos',
-                                                date: currentISTDate,
-                                                time: currentISTTime,
-                                                currentUrl: window.location.href,
-                                            };
-                                            const webhookURL = "https://webhooks.integrately.com/a/webhooks/9fcf0d5c0d364e9f8709a277675b5ead"; // Replace with your actual webhook endpoint URL
-                                            try {
-                                                const res = await fetch(webhookURL, {
-                                                    method: "POST",
-                                                    body: JSON.stringify(userData),
-                                                    headers: {
-                                                        "Content-Type": "application/json",
-                                                        // Add any additional headers if needed
-                                                    },
-                                                });
-                                                if (res.ok) {
-                                                    // Webhook request successful
-                                                    console.log("Form submitted successfully");
-                                                    // You can add any additional logic here
-                                                } else {
-                                                    console.error("Webhook request failed:", res.status, res.statusText);
-                                                    // Handle error if needed
-                                                }
-                                            } catch (error) {
-                                                console.error("Error sending webhook request:", error);
-                                                // Handle error if needed
-                                            }
-                                        }
-                                        if (document.getElementById("submit")) {
-                                            const form = document.getElementById("wf-form-second-form");
-                                            form.addEventListener('submit', async function (event) {
-                                                event.preventDefault();
-                                                await submit();
-                                            });
-                                        }
-                                    </script>
-                                </div>
+                              
                             </div>
                         </div>
                         <div class="footer-content">
@@ -344,5 +299,6 @@
     <!-- End Google Tag Manager (noscript) -->
 </body>
 <!-- Mirrored from www.kairosbschool.com/community by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 14:39:17 GMT -->
+<script type="module" src="./assets/js/firebase.js"></script>
 
 </html>

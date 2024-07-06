@@ -172,111 +172,15 @@
                     type="submit" data-wait="Please wait..." class="submit_button w-button" value="Submit" />
                 </form>
                 <div class="custom-success w-form-done">
-                  <h1 class="margin-bottom-10">Redirecting to Calendly</h1>
-                  <div>Choose an Interview Slot</div>
+                  <h1 class="margin-bottom-10">Thank You for Your Response</h1>
+                  <div>Our Team will Contact You</div>
                 </div>
                 <div class="error-message w-form-fail">
                   <div>Oops! Something went wrong while submitting the form.</div>
                 </div>
               </div>
             </div>
-            <div class="w-embed w-script">
-              <style>
-                select {
-                  -webkit-appearance: none;
-                  -moz-appearance: none;
-                  appearance: none;
-                }
-              </style>
-              <script>
-
-                /*only sheets*/
-
-                async function submitlead(user_id1) {
-                  const urlSearch = new URLSearchParams(window.location.search);
-                  const form_name1 = document.getElementById("name").value;
-                  const form_email1 = document.getElementById("billing_email").value;
-                  const form_phone1 = document.getElementById("phone").value;
-                  const form_experience = document.getElementById("experience").value;
-                  const form_designation = document.getElementById("designation").value;
-                  const form_linkedin = document.getElementById("linkedin").value;
-                  const form_referred = document.getElementById("referred").value;
-
-                  // Get current date and time in IST
-                  const currentISTDate = new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' });
-                  const currentISTTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
-
-                  const userData = {
-                    phone: form_phone1,
-                    email: form_email1,
-                    id: user_id1,
-                    name: form_name1,
-                    experience: form_experience,
-                    designation: form_designation,
-                    linkedin: form_linkedin,
-                    referred: form_referred,
-                    courseKey: 'Kairos-brochure',
-                    date: currentISTDate,
-                    time: currentISTTime,
-                    currentUrl: window.location.href,
-                  };
-
-                  console.log("data passed to object");
-
-                  const utm_source = urlSearch.get("utm_source");
-                  const body = utm_source ? { ...userData, utm_source } : userData;
-
-                  const webhookURL1 = "https://webhooks.integrately.com/a/webhooks/77cd20eadb624b3aab51daad6b723444"; // Replace with your actual webhook endpoint URL
-
-                  try {
-                    const res = await fetch(webhookURL1, {
-                      method: "POST",
-                      body: JSON.stringify(body),
-                      headers: {
-                        "Content-Type": "application/json",
-                        // Add any additional headers if needed
-                      },
-                    });
-
-                    if (res.ok) {
-                      // Webhook request successful
-                      console.log("login");
-                      // Redirect to the specified URL
-                      window.location.href = "https://calendly.com/d/ckyp-p7n-wcr/fast-track-application-book-a-slot-with-the-team";
-                    } else {
-                      console.error("Webhook request failed:", res.status, res.statusText);
-                      // Handle error if needed
-                    }
-                  } catch (error) {
-                    console.error("Error sending webhook request:", error);
-                    // Handle error if needed
-                  }
-                }
-
-                if (document.getElementById("proceed")) {
-                  const user_id1 = crypto.randomUUID();
-                  const form1 = document.getElementById("wf-form-email-Form");
-
-                  form1.addEventListener('submit', async function (event) {
-                    event.preventDefault();
-                    const form_name1 = document.getElementById("name").value;
-                    const form_email1 = document.getElementById("billing_email").value;
-                    const form_phone1 = document.getElementById("phone").value;
-                    const form_experience = document.getElementById("experience").value;
-                    const form_designation = document.getElementById("designation").value;
-                    const form_linkedin = document.getElementById("linkedin").value;
-                    const form_referred = document.getElementById("referred").value;
-
-
-                    await submitlead(user_id1);
-                  });
-                }
-
-                /*only sheets*/
-
-
-              </script>
-            </div>
+            
             <div data-w-id="a1df6361-d0b6-a120-e951-72153e605335" class="wrong"><img
                 src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659e75ca21381b898ef3b9ec_close.webp"
                 loading="lazy" alt="close icon" class="wrong-image" /></div>
@@ -284,108 +188,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="pop-up-modal">
-      <div class="pop-up-form ux">
-        <div data-w-id="702dbb8a-47b9-903c-44a6-0d834f53d219" class="close-button"><img
-            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/65a4d2ee09fa07488adff242_maki_cross.svg"
-            loading="lazy" alt="" /></div>
-        <div class="popup-log">Download Brochure</div>
-        <div id="proceed-form" class="d2c-form-block w-form">
-          <form id="wf-form-third-Form" name="wf-form-First-Form" data-name="First Form" method="post" class="d2c-form"
-            data-wf-page-id="6598e67d2384e3889d7c9f72" data-wf-element-id="702dbb8a-47b9-903c-44a6-0d834f53d21d"><label
-              for="user_name-2">Full Name</label><input class="d2c-input w-input" maxlength="256" name="billing_name"
-              data-name="Billing Name" placeholder="Full Name" type="text" id="user_name" required="" /><label
-              for="user_email-2">Email</label><input class="d2c-input w-input" maxlength="256" name="billing_email-2"
-              data-name="Billing Email 2" placeholder="Email" type="email" id="user_email" required="" /><label
-              for="user_phone-2">Phone</label><input class="d2c-input w-input" maxlength="256" name="billing_phone"
-              data-name="Billing Phone" placeholder="Phone" type="tel" id="user_phone" required="" /><input
-              id="user_proceed" type="submit" data-wait="Please wait..." class="d2c-btn submit-form aic w-button"
-              value="Submit" /></form>
-          <div class="form-message-success w-form-done">
-            <div>Thank you! Your brochure will start downloading shortly!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
-          <div class="w-embed w-script">
-            <script>
-
-
-              /*only sheets*/
-
-              async function submit(user_id1) {
-                const urlSearch = new URLSearchParams(window.location.search);
-                const form_name1 = document.getElementById("user_name").value;
-                const form_email1 = document.getElementById("user_email").value;
-                const form_phone1 = document.getElementById("user_phone").value;
-
-                // Get current date and time in IST
-                const currentISTDate = new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' });
-                const currentISTTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
-
-                const userData = {
-                  phone: form_phone1,
-                  email: form_email1,
-                  id: user_id1,
-                  name: form_name1,
-                  courseKey: 'Kairos-brochure',
-                  date: currentISTDate,
-                  time: currentISTTime,
-                  currentUrl: window.location.href,
-                };
-
-                const utm_source = urlSearch.get("utm_source");
-                const body = utm_source ? { ...userData, utm_source } : userData;
-
-                const webhookURL1 = "https://webhooks.integrately.com/a/webhooks/d25ec565b1444a48951381a78e163df3"; // Replace with your actual webhook endpoint URL
-
-                try {
-                  const res = await fetch(webhookURL1, {
-                    method: "POST",
-                    body: JSON.stringify(body),
-                    headers: {
-                      "Content-Type": "application/json",
-                      // Add any additional headers if needed
-                    },
-                  });
-
-                  if (res.ok) {
-                    // Webhook request successful
-                    console.log("login");
-                    // Redirect to the specified URL
-                    window.location.href = "https://drive.google.com/uc?export=download&amp;id=1h_10WOcepUolKGF2h_W2J-Lst3LlUax_";
-                  } else {
-                    console.error("Webhook request failed:", res.status, res.statusText);
-                    // Handle error if needed
-                  }
-                } catch (error) {
-                  console.error("Error sending webhook request:", error);
-                  // Handle error if needed
-                }
-              }
-
-              if (document.getElementById("user_proceed")) {
-                const user_id1 = crypto.randomUUID();
-                const form1 = document.getElementById("wf-form-third-Form");
-
-                form1.addEventListener('submit', async function (event) {
-                  event.preventDefault();
-                  const form_name1 = document.getElementById("user_name").value;
-                  const form_email1 = document.getElementById("user_email").value;
-                  const form_phone1 = document.getElementById("user_phone").value;
-
-                  await submit(user_id1);
-                });
-              }
-
-              /*only sheets*/
-
-
-            </script>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
       role="banner" class="navbar w-nav">
       <div class="padding-global">
@@ -1831,52 +1633,7 @@
                       <div>Oops! Something went wrong while submitting the form.</div>
                     </div>
                   </div>
-                  <div class="w-embed w-script">
-                    <script>
-                      async function submit() {
-                        const form_email = document.getElementById("email").value;
-                        // Get current date and time in IST
-                        const currentISTDate = new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' });
-                        const currentISTTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
-                        const userData = {
-                          email: form_email,
-                          courseKey: 'kairos',
-                          date: currentISTDate,
-                          time: currentISTTime,
-                          currentUrl: window.location.href,
-                        };
-                        const webhookURL = "https://webhooks.integrately.com/a/webhooks/9fcf0d5c0d364e9f8709a277675b5ead"; // Replace with your actual webhook endpoint URL
-                        try {
-                          const res = await fetch(webhookURL, {
-                            method: "POST",
-                            body: JSON.stringify(userData),
-                            headers: {
-                              "Content-Type": "application/json",
-                              // Add any additional headers if needed
-                            },
-                          });
-                          if (res.ok) {
-                            // Webhook request successful
-                            console.log("Form submitted successfully");
-                            // You can add any additional logic here
-                          } else {
-                            console.error("Webhook request failed:", res.status, res.statusText);
-                            // Handle error if needed
-                          }
-                        } catch (error) {
-                          console.error("Error sending webhook request:", error);
-                          // Handle error if needed
-                        }
-                      }
-                      if (document.getElementById("submit")) {
-                        const form = document.getElementById("wf-form-second-form");
-                        form.addEventListener('submit', async function (event) {
-                          event.preventDefault();
-                          await submit();
-                        });
-                      }
-                    </script>
-                  </div>
+             
                 </div>
               </div>
               <div class="footer-content">
@@ -1950,5 +1707,6 @@
   <!-- End Google Tag Manager (noscript) -->
 </body>
 <!-- Mirrored from www.kairosbschool.com/business-fellowship by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 14:39:18 GMT -->
+<script type="module" src="./assets/js/firebase.js"></script>
 
 </html>
