@@ -1,7 +1,7 @@
 <!DOCTYPE html><!-- Last Published: Mon Jul 01 2024 10:31:55 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="www.kairosbschool.com" data-wf-page="65c37bfcec3565725e0de7b8"
   data-wf-site="6596416fc1d5c1ea18fbe817" lang="en">
-<!-- Mirrored from www.kairosbschool.com/marketing-fellowship?7b9dcc4c_page=1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 14:39:47 GMT -->
+<!-- Mirrored from www.kairosbschool.com/startup-fellowship?7b9dcc4c_page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 14:39:37 GMT -->
 
 <head>
   <meta charset="utf-8" />
@@ -145,7 +145,100 @@
                 </div>
               </div>
             </div>
-           
+            <div class="w-embed w-script">
+              <style>
+                select {
+                  -webkit-appearance: none;
+                  -moz-appearance: none;
+                  appearance: none;
+                }
+              </style>
+              <script>
+
+                /*only sheets*/
+
+                async function submitlead(user_id1) {
+                  const urlSearch = new URLSearchParams(window.location.search);
+                  const form_name1 = document.getElementById("name").value;
+                  const form_email1 = document.getElementById("billing_email").value;
+                  const form_phone1 = document.getElementById("phone").value;
+                  const form_experience = document.getElementById("experience").value;
+                  const form_designation = document.getElementById("designation").value;
+                  const form_linkedin = document.getElementById("linkedin").value;
+                  const form_referred = document.getElementById("referred").value;
+
+                  // Get current date and time in IST
+                  const currentISTDate = new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' });
+                  const currentISTTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
+
+                  const userData = {
+                    phone: form_phone1,
+                    email: form_email1,
+                    id: user_id1,
+                    name: form_name1,
+                    experience: form_experience,
+                    designation: form_designation,
+                    linkedin: form_linkedin,
+                    referred: form_referred,
+                    courseKey: 'Kairos-brochure',
+                    date: currentISTDate,
+                    time: currentISTTime,
+                    currentUrl: window.location.href,
+                  };
+
+                  console.log("data passed to object");
+
+                  const utm_source = urlSearch.get("utm_source");
+                  const body = utm_source ? { ...userData, utm_source } : userData;
+
+                  const webhookURL1 = "https://webhooks.integrately.com/a/webhooks/268aaecec5344d349254c3978765fecb"; // Replace with your actual webhook endpoint URL
+
+                  try {
+                    const res = await fetch(webhookURL1, {
+                      method: "POST",
+                      body: JSON.stringify(body),
+                      headers: {
+                        "Content-Type": "application/json",
+                        // Add any additional headers if needed
+                      },
+                    });
+
+                    if (res.ok) {
+                      // Webhook request successful
+                      console.log("login");
+                      // Redirect to the specified URL
+                      window.location.href = "https://calendly.com/rashika-bhagat/fast-track-application-book-a-slot-with-the-team";
+                    } else {
+                      console.error("Webhook request failed:", res.status, res.statusText);
+                      // Handle error if needed
+                    }
+                  } catch (error) {
+                    console.error("Error sending webhook request:", error);
+                    // Handle error if needed
+                  }
+                }
+
+                if (document.getElementById("proceed")) {
+                  const user_id1 = crypto.randomUUID();
+                  const form1 = document.getElementById("wf-form-email-Form");
+
+                  form1.addEventListener('submit', async function (event) {
+                    event.preventDefault();
+                    const form_name1 = document.getElementById("name").value;
+                    const form_email1 = document.getElementById("billing_email").value;
+                    const form_phone1 = document.getElementById("phone").value;
+                    const form_experience = document.getElementById("experience").value;
+                    const form_designation = document.getElementById("designation").value;
+                    const form_linkedin = document.getElementById("linkedin").value;
+                    const form_referred = document.getElementById("referred").value;
+
+
+                    await submitlead(user_id1);
+                  });
+                }
+
+              </script>
+            </div>
             <div data-w-id="881787b9-83b2-bb80-2e06-e5bb28c75b7d" class="wrong"><img
                 src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659e75ca21381b898ef3b9ec_close.webp"
                 loading="lazy" alt="close icon" class="wrong-image" /></div>
@@ -177,7 +270,82 @@
             <div>Oops! Something went wrong while submitting the form.</div>
           </div>
         </div>
-        
+        <div class="w-embed w-script">
+          <script>
+
+
+            /*only sheets*/
+
+            async function submit(user_id1) {
+              const urlSearch = new URLSearchParams(window.location.search);
+              const form_name1 = document.getElementById("user_name").value;
+              const form_email1 = document.getElementById("user_email").value;
+              const form_phone1 = document.getElementById("user_phone").value;
+
+              // Get current date and time in IST
+              const currentISTDate = new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' });
+              const currentISTTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
+
+              const userData = {
+                phone: form_phone1,
+                email: form_email1,
+                id: user_id1,
+                name: form_name1,
+                courseKey: 'Kairos-brochure',
+                date: currentISTDate,
+                time: currentISTTime,
+                currentUrl: window.location.href,
+              };
+
+              const utm_source = urlSearch.get("utm_source");
+              const body = utm_source ? { ...userData, utm_source } : userData;
+
+              const webhookURL1 = "https://webhooks.integrately.com/a/webhooks/732dcbbaab1647af8c59ec12c1442d1b"; // Replace with your actual webhook endpoint URL
+
+              try {
+                const res = await fetch(webhookURL1, {
+                  method: "POST",
+                  body: JSON.stringify(body),
+                  headers: {
+                    "Content-Type": "application/json",
+                    // Add any additional headers if needed
+                  },
+                });
+
+                if (res.ok) {
+                  // Webhook request successful
+                  console.log("login");
+                  // Redirect to the specified URL
+                  window.location.href = "https://drive.google.com/uc?export=download&amp;id=19cMmUbeJ0ecxSRL-0u1OV7nXDHOIldkP";
+                } else {
+                  console.error("Webhook request failed:", res.status, res.statusText);
+                  // Handle error if needed
+                }
+              } catch (error) {
+                console.error("Error sending webhook request:", error);
+                // Handle error if needed
+              }
+            }
+
+            if (document.getElementById("user_proceed")) {
+              const user_id1 = crypto.randomUUID();
+              const form1 = document.getElementById("wf-form-third-Form");
+
+              form1.addEventListener('submit', async function (event) {
+                event.preventDefault();
+                const form_name1 = document.getElementById("user_name").value;
+                const form_email1 = document.getElementById("user_email").value;
+                const form_phone1 = document.getElementById("user_phone").value;
+
+                await submit(user_id1);
+              });
+            }
+
+            /*only sheets*/
+
+
+          </script>
+        </div>
       </div>
     </div>
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
@@ -196,8 +364,8 @@
                 </div>
                 <nav class="dropdown-list w-dropdown-list">
                   <div class="line hide"></div>
-                  <div class="relative flex-v"><a href="business-fellowship.html" class="navlink w-dropdown-link">Kairos
-                      Business Fellowship</a><a href="marketing-fellowship.html" aria-current="page"
+                  <div class="relative flex-v"><a href="idea-fellowship.html" class="navlink w-dropdown-link">Kairos
+                      Business Fellowship</a><a href="startup-fellowship.html" aria-current="page"
                       class="navlink w-dropdown-link w--current">Kairos Marketing Fellowship</a></div>
                 </nav>
               </div><a href="events.html" class="navlink hide w-nav-link">Events</a><a href="newsletter.html"
@@ -900,171 +1068,92 @@
                       <div role="listitem" class="collection-item w-dyn-item">
                         <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
                           data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
-                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4a26f5ebd24e3928e20cc_Ameya.png"
+                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4a8555ebd24e39291a2e0_Rajat%20Girdhar.png"
                             loading="lazy" alt="" class="mentor_image" /><img
                             src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
                             loading="lazy" alt="" class="radial" />
                           <div class="topic">
-                            <div>Advanced Marketing Mastery</div>
+                            <div>Retention Marketing</div>
                           </div>
                           <div class="mentor-details">
                             <div class="mentor-name">
-                              <h3 class="lowercase">Ameya Velankar</h3>
-                              <div>Head of Marketing</div>
-                            </div><img
-                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4ac2d3966a71a92861ca3_1659761207uber-app-logo-png%20(1).png"
-                              alt="" class="mentor-logo" />
-                          </div>
-                        </div>
-                      </div>
-                      <div role="listitem" class="collection-item w-dyn-item">
-                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
-                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
-                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4a93424b1841f03dae956_Somil.png"
-                            loading="lazy" alt="" class="mentor_image" /><img
-                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
-                            loading="lazy" alt="" class="radial" />
-                          <div class="topic">
-                            <div>Go To Market Strategy</div>
-                          </div>
-                          <div class="mentor-details">
-                            <div class="mentor-name">
-                              <h3 class="lowercase">Somil Agrawal</h3>
-                              <div>Head of Marketing</div>
-                            </div><img
-                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4b042068d22921fc61fa9_SR-logo-wiki%20(1).png"
-                              alt="" class="mentor-logo" />
-                          </div>
-                        </div>
-                      </div>
-                      <div role="listitem" class="collection-item w-dyn-item">
-                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
-                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
-                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4a7f422d8fd3fc8e04c75_Prathamesh%20Dembla%20(1).png"
-                            loading="lazy" alt="" class="mentor_image" /><img
-                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
-                            loading="lazy" alt="" class="radial" />
-                          <div class="topic">
-                            <div>Customer Acquisition mastery</div>
-                          </div>
-                          <div class="mentor-details">
-                            <div class="mentor-name">
-                              <h3 class="lowercase">Prathamesh</h3>
-                              <div>Ex- Head of Growth</div>
-                            </div><img
-                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4ac0cca435f0764378a49_1200px-Licious-Logo%20(1).png"
-                              alt="" class="mentor-logo" />
-                          </div>
-                        </div>
-                      </div>
-                      <div role="listitem" class="collection-item w-dyn-item">
-                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
-                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
-                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65e854e7cb1fa5122747145c_Shikha_1-removebg-preview.png"
-                            loading="lazy" alt="" class="mentor_image" /><img
-                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
-                            loading="lazy" alt="" class="radial" />
-                          <div class="topic">
-                            <div>Fundamentals of Marketing</div>
-                          </div>
-                          <div class="mentor-details">
-                            <div class="mentor-name">
-                              <h3 class="lowercase">Shikha Pakhide</h3>
-                              <div>Ex - Head of Marketing</div>
-                            </div><img
-                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65e854eb2fdce7a196a98438_Shikha%201%20(1).png"
-                              alt="" class="mentor-logo" />
-                          </div>
-                        </div>
-                      </div>
-                      <div role="listitem" class="collection-item w-dyn-item">
-                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
-                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
-                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4a5283a289f9b4fa589d1_Jaydeep%20(1).png"
-                            loading="lazy" alt="" class="mentor_image" /><img
-                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
-                            loading="lazy" alt="" class="radial" />
-                          <div class="topic">
-                            <div>B2B Marketing</div>
-                          </div>
-                          <div class="mentor-details">
-                            <div class="mentor-name">
-                              <h3 class="lowercase">Jaydeep Deshpande</h3>
-                              <div>Head of Enterprise Marketing</div>
-                            </div><img
-                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4ae0be1873884f00688b7_Google_2015_logo.png"
-                              alt="" class="mentor-logo" />
-                          </div>
-                        </div>
-                      </div>
-                      <div role="listitem" class="collection-item w-dyn-item">
-                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
-                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
-                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4aa17e5bbed011c4a1eaf_Vishal.png"
-                            loading="lazy" alt="" class="mentor_image" /><img
-                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
-                            loading="lazy" alt="" class="radial" />
-                          <div class="topic">
-                            <div>SEO &amp; Organic Growth</div>
-                          </div>
-                          <div class="mentor-details">
-                            <div class="mentor-name">
-                              <h3 class="lowercase">Vishal Gala</h3>
-                              <div>Head Of SEO</div>
-                            </div><img
-                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4add3cace7bc868d92cf7_Dream11_Logo_2023.png"
-                              alt="" class="mentor-logo" />
-                          </div>
-                        </div>
-                      </div>
-                      <div role="listitem" class="collection-item w-dyn-item">
-                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
-                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
-                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4a8fecc7db3a66734fc43_Sandesh.png"
-                            loading="lazy" alt="" class="mentor_image" /><img
-                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
-                            loading="lazy" alt="" class="radial" />
-                          <div class="topic">
-                            <div>Performance Marketing</div>
-                          </div>
-                          <div class="mentor-details">
-                            <div class="mentor-name">
-                              <h3 class="lowercase">Sandesh Gupta</h3>
-                              <div>Director of Growth</div>
-                            </div><img
-                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4afb2d04bbc5b1b2f7967_Mobile_Premier_League_Logo%20(1).png"
-                              alt="" class="mentor-logo" />
-                          </div>
-                        </div>
-                      </div>
-                      <div role="listitem" class="collection-item w-dyn-item">
-                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
-                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
-                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4a694ebe1930e559c22fa_Mihir%20(1).png"
-                            loading="lazy" alt="" class="mentor_image" /><img
-                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
-                            loading="lazy" alt="" class="radial" />
-                          <div class="topic">
-                            <div>International Growth</div>
-                          </div>
-                          <div class="mentor-details">
-                            <div class="mentor-name">
-                              <h3 class="lowercase">Mihir Wakharkar</h3>
+                              <h3 class="lowercase">Rajat Girdhar</h3>
                               <div>Head of Growth</div>
                             </div><img
-                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4ac63a0c64ede72424aba_1_KIYZAsZl-AcW5t8uwP4n6A.png"
+                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4acd75ae6583125e43b0d_Untitled.png"
+                              alt="" class="mentor-logo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div role="listitem" class="collection-item w-dyn-item">
+                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
+                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
+                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4b3d489dadba4cbe1cd81_Untitled%20design%201%20(1).png"
+                            loading="lazy" alt="" class="mentor_image" /><img
+                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
+                            loading="lazy" alt="" class="radial" />
+                          <div class="topic">
+                            <div>Social Media Marketing</div>
+                          </div>
+                          <div class="mentor-details">
+                            <div class="mentor-name">
+                              <h3 class="lowercase">Nihal Rustagi</h3>
+                              <div>Director of Growth</div>
+                            </div><img
+                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4ad256ec1f96fd1d4aba4_apna-logo--1---1-.png"
+                              alt="" class="mentor-logo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div role="listitem" class="collection-item w-dyn-item">
+                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
+                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
+                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4b529a76f863b611ebf32_Untitled%20design%20(1)%201%20(1).png"
+                            loading="lazy" alt="" class="mentor_image" /><img
+                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
+                            loading="lazy" alt="" class="radial" />
+                          <div class="topic">
+                            <div>Brand Marketing</div>
+                          </div>
+                          <div class="mentor-details">
+                            <div class="mentor-name">
+                              <h3 class="lowercase">Ajay Ravindran</h3>
+                              <div>Head of Brand</div>
+                            </div><img
+                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4b0e3c9d10398293bbeba_Razorpay_logo%201.png"
+                              alt="" class="mentor-logo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div role="listitem" class="collection-item w-dyn-item">
+                        <div id="w-node-_60471053-d771-9cc4-6758-2f7381ac8fb6-81ac8fb6"
+                          data-w-id="60471053-d771-9cc4-6758-2f7381ac8fb6" class="card"><img
+                            src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4a78447fdc401832f57af_Raghav%20Shukla.png"
+                            loading="lazy" alt="" class="mentor_image" /><img
+                            src="https://cdn.prod.website-files.com/6596416fc1d5c1ea18fbe817/659793e52613e4e1a471ca76_Gradient.webp"
+                            loading="lazy" alt="" class="radial" />
+                          <div class="topic">
+                            <div>Marketing Analytics &amp; CRM</div>
+                          </div>
+                          <div class="mentor-details">
+                            <div class="mentor-name">
+                              <h3 class="lowercase">Raghav Shukla</h3>
+                              <div>Director Product Marketing</div>
+                            </div><img
+                              src="./cdn.prod.website-files.com/65969c217a68c97f9a6ac542/65c4afd2c7d423b26e131fc3_urban%20company.png"
                               alt="" class="mentor-logo" />
                           </div>
                         </div>
                       </div>
                     </div>
                     <div role="navigation" aria-label="List" class="w-pagination-wrapper pagination"><a
-                        href="marketing-fellowship3683.html?7b9dcc4c_page=2" aria-label="Next Page"
-                        class="w-pagination-next ternary_btn border-black white-back">
-                        <div class="w-inline-block">Next</div>
-                      </a>
-                      <link rel="prerender" href="marketing-fellowship3683.html?7b9dcc4c_page=2" />
-                    </div>
+                        href="startup-fellowship4891.html?7b9dcc4c_page=1" aria-label="Previous Page"
+                        class="w-pagination-previous"><svg class="w-pagination-previous-icon" height="12px" width="12px"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" transform="translate(0, 1)">
+                          <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M8 10L4 6l4-4"></path>
+                        </svg>
+                        <div class="w-inline-block">Previous</div>
+                      </a></div>
                   </div>
                 </div>
               </div>
@@ -1933,6 +2022,6 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 </body>
-<!-- Mirrored from www.kairosbschool.com/marketing-fellowship?7b9dcc4c_page=1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 14:39:47 GMT -->
+<!-- Mirrored from www.kairosbschool.com/startup-fellowship?7b9dcc4c_page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 14:39:43 GMT -->
 
 </html>
