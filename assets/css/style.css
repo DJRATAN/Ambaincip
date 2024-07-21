@@ -4528,7 +4528,7 @@
 
  .footerClass {
      display: grid;
-     column-gap: 350px;
+     column-gap: 50px;
      grid-template-columns: auto auto;
  }
 
